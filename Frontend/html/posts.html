@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="UTF-8">
+
+<title>Blog CMS</title>
+
+<!-- Bootstrap -->
+<link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+>
+
+<!-- CSS custom -->
+<link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/interfaccia.css">
+
+</head>
+
+<body>
+
+<div class="container mt-4">
+
+
+    <!-- HEADER -->
+    <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h1 class="fw-bold">
+            📝 Blog CMS
+        </h1>
+
+
+        <div>
+
+            <button
+                id="createPostBtn"
+                class="btn btn-primary me-2"
+            >
+                + Nuovo Post
+            </button>
+
+
+            <button
+                id="adminPanelBtn"
+                class="btn btn-dark me-2"
+                style="display:none;"
+                onclick="window.location.href='/html/admin-users.html'"
+            >
+                👑 Admin Panel
+            </button>
+
+
+            <button
+                class="btn btn-danger"
+                onclick="Auth.logout()"
+            >
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ANNOUNCEMENTS -->
+    <div
+        id="announcementBox"
+        class="mb-4"
+    ></div>
+
+
+
+    <!-- SEARCH -->
+    <div class="card shadow-sm mb-4">
+
+        <div class="card-body">
+
+            <input
+                type="text"
+                id="search"
+                class="form-control"
+                placeholder="Cerca per titolo, tag o categoria..."
+            >
+
+        </div>
+
+    </div>
+
+
+
+    <!-- POSTS -->
+    <div id="posts"></div>
+
+</div>
+
+
+<script src="../js/auth.js"></script>
+<script src="../js/Api.js"></script>
+<script src="../js/posts.js"></script>
+
+</body>
+</html>

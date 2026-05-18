@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Admin Panel</title>
+
+    <!-- Bootstrap -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+    >
+
+    <!-- tuoi css -->
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/interfaccia.css">
+
+</head>
+
+<body class="admin-theme">
+
+    <div class="container mt-4">
+
+        <!-- HEADER -->
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <h1 class="fw-bold">
+                👑 Admin Dashboard
+            </h1>
+
+            <div>
+
+                <button
+                    class="btn btn-secondary me-2"
+                    onclick="window.location.href='/html/posts.html'"
+                >
+                    ← Posts
+                </button>
+
+                <button
+                    class="btn btn-danger"
+                    onclick="Auth.logout()"
+                >
+                    Logout
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ANNOUNCEMENT CREATE -->
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h4 class="card-title mb-3">
+                    📢 Invia comunicazione agli editor
+                </h4>
+
+                <textarea
+                    id="announcementMessage"
+                    class="form-control mb-3"
+                    rows="3"
+                    placeholder="Scrivi il messaggio..."
+                ></textarea>
+
+                <button
+                    class="btn btn-warning"
+                    onclick="AdminUsersPage.sendAnnouncement()"
+                >
+                    Invia annuncio
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ANNOUNCEMENTS -->
+        <div class="card shadow-sm mb-4">
+
+            <div class="card-body">
+
+                <h4 class="card-title">
+                    📢 Annunci attivi
+                </h4>
+
+                <div id="announcementList"></div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- USERS -->
+        <div class="card shadow-sm">
+
+            <div class="card-body">
+
+                <h4 class="card-title">
+                    👥 Gestione utenti
+                </h4>
+
+                <div id="users"></div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/auth.js"></script>
+    <script src="../js/Api.js"></script>
+    <script src="../js/admin-users.js"></script>
+
+</body>
+</html>

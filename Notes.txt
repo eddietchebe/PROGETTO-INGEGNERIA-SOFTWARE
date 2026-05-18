@@ -1,3 +1,7 @@
 If you want to enter the dockerfile ->  docker exec -it test-db-1 mysql -u testuser -p
 passward : "testpass"
 To use a db -> USE dbname;
+
+-> Nel frontend tutte le classi JS devono fare una sola cosa (decoupling) una classe per gestire le API con il backend
+-> Sul la login page il link del visitatore deve esserci NON sulla registrazione
+-> 

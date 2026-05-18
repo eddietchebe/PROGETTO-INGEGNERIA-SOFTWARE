@@ -1,32 +1,52 @@
-name: test
-
 services:
-
-  back:
-    build:
-      context: docker/back
-      dockerfile: Dockerfile
-    volumes:
-      - type: bind
-        source: src/Backend
-        target: /var/www/html
-    ports:
-      - "8081:80"
-    depends_on:
-      - db
 
   db:
     image: mysql:8.0
+    container_name: blog_db
     restart: always
+
     environment:
       MYSQL_ROOT_PASSWORD: rootpassword
       MYSQL_DATABASE: testdb
       MYSQL_USER: testuser
       MYSQL_PASSWORD: testpass
+
     ports:
       - "3307:3306"
+
     volumes:
       - db_data:/var/lib/mysql
+
+
+
+  backend:
+    build: ./Backend
+
+    container_name: blog_backend
+
+    ports:
+      - "8080:80"
+
+    volumes:
+      - ./Backend:/var/www/html
+
+    depends_on:
+      - db
+
+
+
+  frontend:
+    build: ./Frontend
+
+    container_name: blog_frontend
+
+    ports:
+      - "3000:80"
+
+    depends_on:
+      - backend
+
+
 
 volumes:
   db_data:

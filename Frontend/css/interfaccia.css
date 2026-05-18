@@ -1,0 +1,188 @@
+/* =======================
+   BASE
+======================= */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 20px;
+
+    transition: 0.3s;
+
+}
+
+
+
+.post {
+
+    padding: 20px;
+
+    margin-bottom: 20px;
+
+    border-radius: 12px;
+
+    border: 1px solid #ccc;
+
+}
+
+
+
+button {
+
+    padding: 8px 14px;
+
+    margin: 5px;
+
+    cursor: pointer;
+
+    border: none;
+
+    border-radius: 8px;
+
+}
+
+
+
+/* =======================
+   ADMIN
+======================= */
+
+.admin-theme {
+
+    background: #1a1a1a;
+    color: gold;
+
+}
+
+
+
+.admin-theme .post {
+
+    background: #139650;
+
+    border-left: 6px solid red;
+
+    box-shadow: 0 0 12px rgba(255,0,0,0.2);
+
+}
+
+
+
+.admin-theme button {
+
+    background: red;
+
+    color: white;
+
+}
+
+
+
+/* =======================
+   EDITOR
+======================= */
+
+.editor-theme {
+
+    background: #f4f8ff;
+
+    color: #222;
+
+}
+
+
+
+.editor-theme .post {
+
+    background: white;
+
+    border-left: 6px solid #0066ff;
+
+    box-shadow: 0 0 8px rgba(0, 0, 255, 0.349);
+
+}
+
+
+
+.editor-theme button {
+
+    background: #0066ff;
+
+    color: white;
+
+}
+
+
+
+/* =======================
+   VISITOR
+======================= */
+
+.visitor-theme {
+
+    background: #fffaf0;
+
+    color: #333;
+
+}
+
+
+
+.visitor-theme .post {
+
+    background: white;
+
+    border-left: 6px solid orange;
+
+}
+
+
+
+.visitor-theme button {
+
+    background: orange;
+
+    color: white;
+
+}
+
+.admin-theme {
+    background-color: #121212;
+    min-height: 100vh;
+}
+
+.admin-theme .card {
+    border-radius: 12px;
+}
+
+.admin-theme h1 {
+    color: gold;
+}
+
+.post {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.announcement {
+    background: #fff8e1;
+    border-left: 5px solid orange;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.admin-theme {
+    background: #121212;
+    min-height: 100vh;
+}
+
+.admin-theme h1 {
+    color: gold;
+}
